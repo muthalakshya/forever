@@ -32,7 +32,7 @@ const addProduct = async (req, res) => {
             date: Date.now()
         }
 
-        console.log(productdata)
+        // console.log(productdata)
 
         const product = new productModel(productdata)
         await product.save()
