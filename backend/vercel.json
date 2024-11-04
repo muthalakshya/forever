@@ -1,4 +1,4 @@
-  {
+{
     "version": 2,
     "builds": [
         {
@@ -6,8 +6,10 @@
             "use": "@vercel/node",
             "config": {
                 "includeFiles": [
-                    "dist/**"
-                ]
+                    "dist/**",
+                    "node_modules/**"
+                ],
+                "externalPackages": ["stripe"]
             }
         }
     ],
