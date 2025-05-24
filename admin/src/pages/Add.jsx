@@ -35,8 +35,9 @@ const Add = ({token}) => {
       formData.append('image2', image2 ? image2 : null)
       formData.append('image3', image3 ? image3 : null)
       formData.append('image4', image4 ? image4 : null)
+      console.log(image1)
       const response = await axios.post(backendUrl + "/api/product/add", formData,{headers:{token}})
-      // console.log(response.data)
+      console.log(response.data)
       if(response.data.success){
         toast.success(response.data.message)
         setName('')
